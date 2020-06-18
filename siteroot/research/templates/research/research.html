@@ -1,0 +1,13 @@
+<body style="background-color:#cccfff">
+    <h1>{{ researcher.author }} </h1>
+
+    <h2>Posts:</h2>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <i> {{ post.created_at}}</i>{{ post.subject }}<br />
+            <p>{{post.text}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>

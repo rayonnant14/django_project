@@ -1,0 +1,10 @@
+<body style="background-color:#cccfff">
+<h1> List of researchers
+    <br />
+    <ul>
+        {% for researcher in researchers %}
+          <li><a href="{% url 'researcher_by_id' researcher.id %}">{{ researcher.author }}</a></li>
+        {% endfor %}
+    </ul>
+</h1>
+</body>

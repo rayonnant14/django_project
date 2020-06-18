@@ -1,0 +1,10 @@
+<body style="background-color:#cccfff">
+<h1> List of posts
+    <br />
+    <ul>
+        {% for post in posts %}
+            <li>{{researcher.author}} <a href="{% url 'post_by_id' post.id %}">{{post.subject}}</a></li>
+        {% endfor %}
+    </ul>
+</h1>
+</body>

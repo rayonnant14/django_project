@@ -1,0 +1,16 @@
+<body style="background-color:#cccfff">
+    <h1> Lets start ! </h1>
+
+    <form action="{%url 'create_post' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="subject" maxlength="80" size="80" placeholder="Subject" value={{ subject }}>
+        <br />
+        <textarea name="text" maxlength="4096" rows="10" cols="80" placeholder="Post text">{{ text }}</textarea>
+        <br />
+        <input type="submit" value="Create post" />
+    </form>
+
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</body>

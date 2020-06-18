@@ -1,0 +1,12 @@
+<body style="background-color:#cccfff">
+    <h2>Hello, {{ username }}! Welcome to our platform</h2>
+
+    <h2>On our site you can find your favorite researchers or share your scientific experience</h2>
+    <h3> <a href="{% url 'get_researchers' %}">Check all researchers</a></h3>
+
+    <h3> <a href="{% url 'create_post' %}">Create your ingenious post!</a></h3>
+
+    {% if request.user.is_authenticated %}
+        <h3> <a href="{% url 'logout' %}?next={{ request.path }}">Log out</a></h3>
+    {% endif %}
+</body>

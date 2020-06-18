@@ -1,0 +1,4 @@
+<h1>{{ researcher.author }} </h1>
+<h1>{{ post.subject }} </h1>
+
+<p> {{ post.text }} </p>
